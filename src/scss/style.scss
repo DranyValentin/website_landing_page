@@ -1,0 +1,25 @@
+@import "includes/settings";
+
+h1 
+{
+	display: block;
+	font-size: $fontSize;
+
+	background: url('/img/logo.jpg') no-repeat;
+	color: $logoTextColor;
+	padding: 5px 0 5px 65px;
+	letter-spacing: 3px;
+	line-height: 18px;
+
+	border: 1px solid red;
+	
+}
+
+h1 strong
+{
+	font-size: $fontSize + 8;
+	font-weight: 400;
+/*	letter-spacing: 4px;*/
+	text-transform: uppercase;
+}
+
