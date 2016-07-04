@@ -9,16 +9,19 @@ html
 		
 	body
 		header
-			h1 <strong>Сила слова</strong><br>Тренинговый центр
-			ul
-				-
-					list = ["Главная",
-							"Преподаватель",
-							"Программа Курса",
-							"Отзывы",
-							"Цена и Расписание"]
-				each item in list
-					li= item
+			.wrap_Header
+				.logo
+					h1 <strong>Сила слова</strong><br>Тренинговый Центр
+				nav.nav
+					ul
+						-
+							list = ["Главная",
+									"Преподаватель",
+									"Программа Курса",
+									"Отзывы",
+									"Цена и Расписание"]
+						each item in list
+							li= item
 		-for (var x = 1; x < 12; x++)
 			section
 				case x
