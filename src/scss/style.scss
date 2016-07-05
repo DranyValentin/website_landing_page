@@ -1,5 +1,10 @@
 @import "includes/settings";
 
+body
+{
+	max-width: 1920px;
+}
+
 header
 {
 	display: flex;
@@ -31,7 +36,6 @@ h1
 	color: $colorTextLogo;
 	letter-spacing: 3px;
 	line-height: 18px;
-	//text-align: center;
 
 	background: url('/img/logo.jpg') no-repeat;
 	padding: 5px 0 5px 65px;
@@ -93,9 +97,42 @@ ul li:last-child
 	color: #ffffff;
 	background: $colorBackgroundNav;
 
-//	margin: 20px 0;
-//	padding: 5px 10px;
 	border-radius: 5px;
 	box-shadow: 0 0 1px 2px $colorBorderNav;
 }
+
+// style section #1
+.image-section1
+{
+	height: 706px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	background: url('/img/img1.jpg') no-repeat;
+	background-size: 100% auto;
+}
+
+.image-section1 h2
+{
+	max-width: 730px;
+	
+	font-size: 44px;
+	color: $colorTextNav;
+	
+	text-align: center;
+	text-transform: uppercase;
+
+	background: #fff;
+
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.image-section1 h2 span
+{
+	color: #ff4747;
+}
+
 
