@@ -105,33 +105,58 @@ ul li:last-child
 .image-section1
 {
 	height: 706px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	
 	background: url('/img/img1.jpg') no-repeat;
-	background-position: center center;
+
+	@include image-bg-section;
 }
 
-.image-section1 h2
+.section-bg1
 {
-//	max-width: 730px;
+	@include bg-layer2;
+
+	background: rgba(0,0,0,.5);
+}
+
+.arrow-section1-h2
+{
+	max-width: $width;
 	
-	font-size: 4vw;
+	display: flex;
+
 	color: $colorTextNav;
+
+	margin-top: 150px;
+}
+
+.arrow-section1-h2 .fa-reply
+{
+	@include arrow;
+
+	transform: rotate(-90deg);
+}
+
+.arrow-section1-h2 .fa-share
+{
+	@include arrow
+
+	transform: rotate(90deg);
+}
+
+.arrow-section1-h2 h2
+{
+	font-size: 4vw;
 	
 	text-align: center;
 	text-transform: uppercase;
 
 	background: #fff;
 
-	margin-top: 150px;
-	padding: 10px;
+	padding: 15px;
 	border-radius: 5px;
 }
 
-.image-section1 h2 span
+.arrow-section1-h2 h2 span
 {
 	color: $red;
 }
@@ -142,7 +167,7 @@ ul li:last-child
 	flex-wrap: wrap;
 
 	background: #fff;
-	margin: 10px 0;
+	margin: 25px 0;
 	padding: 10px;
 	border-radius: 5px;
 }
@@ -168,6 +193,25 @@ ul li:last-child
 	text-transform: none;
 }
 
+.arrow-section1-a
+{
+	margin-top: 50px;
+}
+
+.arrow-section1-a .fa-reply
+{
+	@include arrow
+
+	transform: rotate(-185deg);
+}
+
+.arrow-section1-a .fa-share
+{
+	@include arrow
+
+	transform: rotate(185deg);
+}
+
 .but-save-course
 {
 	font-size: $fontSize + 2;
@@ -177,15 +221,15 @@ ul li:last-child
 	background: $red;
 	color: #fff;
 
-	margin-top: 50px;
 	padding: 10px 30px;
 	border: 1px solid #fff;
 	border-radius: 10px;
 }
 
+
 @media (min-width: 1150px)
 {
-	.image-section1 h2
+	.arrow-section1-h2 h2
 	{
 		font-size: 44px;
 	}
@@ -194,4 +238,61 @@ ul li:last-child
 	{
 		font-size: 26px;
 	}
+
+	.arrow-section1-h2 .fa-reply,
+	.arrow-section1-a .fa-reply,
+	.arrow-section1-h2 .fa-share,
+	.arrow-section1-a .fa-share		
+	{
+		font-size: 44px;
+	}
+}
+
+// style section #2
+.image-section2
+{
+	height: 577px;
+		
+	background: url('/img/img2.jpg') no-repeat;
+
+	@include image-bg-section;
+}
+
+.section2-bg
+{
+	@include bg-layer2;
+
+	background: rgba(255,255,255,.8);
+}
+
+// Style section #2
+.section2-bg h2
+{
+	@include h-section;
+}
+
+.study
+{
+//width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	margin-bottom: 60px;
+}
+
+.study p
+{	
+	width: 395px;
+
+	font-size: $fontSize - 2;
+	color: $colorTextNav;
+	margin: 10px;
+	padding: 10px;
+}
+
+.study strong
+{
+	text-transform: uppercase;
+	font-size: $fontSize + 2;
 }

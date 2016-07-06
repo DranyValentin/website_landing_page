@@ -43,6 +43,15 @@ gulp.task('scss', function ()
     .pipe(connect.reload())
 });
 
+// css
+gulp.task('css', function ()
+{
+	gulp.src('src/css/*.css')
+	.pipe(gulp.dest('dest/css/'))
+	.pipe(connect.reload())
+
+})
+
 // js
 gulp.task('js', function ()
 {
@@ -61,20 +70,33 @@ gulp.task('img', function ()
 
 })
 
+// fonts
+gulp.task('fonts', function ()
+{
+	gulp.src('src/fonts/*.*')
+	.pipe(gulp.dest('dest/fonts/'))
+	.pipe(connect.reload())
+
+})
+
 // watch
 gulp.task('watch', function ()
 {
 	gulp.watch('src/scss/*.scss', ['scss'])
+	gulp.watch('src/css/*.css', ['css'])
 	gulp.watch('src/js/*.js', ['js'])
 	gulp.watch('src/img/*.*', ['img'])
+	gulp.watch('src/fonts/*.*', ['fonts'])
 	gulp.watch('src/templates/*.jade', ['jade'])
 })
 
 // default
 gulp.task('default', ['connect', 
 						'scss',
+						'css',
 						'js',
 						'img',
+						'fonts',
 						'jade',
 						'watch'
 ])
